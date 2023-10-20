@@ -1,0 +1,109 @@
+/* Header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Body Text */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --headerText: "Montserrat",sans-serif;
+    --bodyText: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: #181C74;
+    font-family: var(--bodyText);
+    font-style: normal;
+    font-weight: reguler;
+    font-size: 20px;
+}
+
+h1{
+    font-family: var(--headerText);
+}
+
+/* Navigation Bar */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;    
+}
+
+nav a {
+    display: block;
+    /* color: #fff; */
+    text-align: center;
+    text-decoration: none;
+    /* padding: 2rem; */
+    margin: 2rem;
+    border-bottom: 0px solid transparent;
+    font-size: 15px;
+    /* background-color: red; */
+}
+
+nav a:link { 
+    text-decoration: none;
+    color: white;
+}
+
+nav a:visited { 
+    color: white;
+    border-bottom: 5px solid #D8E9FF;
+}
+
+nav a.active { 
+    border-bottom: 5px solid #D8E9FF;
+}
+
+nav a:hover{
+    border-bottom: 5px solid #D8E9FF;
+    transition: 0.5s;
+}
+
+.body-background{
+    background: linear-gradient(180deg, #D8E9FF 67.5%, rgba(233, 243, 255, 0) 100%);
+}
+
+/* footer */
+
+footer{
+    padding: 3rem;
+    
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+    /* background-color: yellow; */
+    flex-direction: row;
+    gap: 40px;
+}
+
+footer .footer-social img{
+    width: 38px;
+    height: auto;
+    /* padding: 20px; */
+    /* row-gap: 20px; */
+    /* background-color: red; */
+    cursor: pointer;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+
+    <!-- Linking to my Style CSS -->
+    <link rel="stylesheet" href="contactme-style.css">
+    <link rel="stylesheet" href="main.js">
+
+    <!-- import library country code picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="homePersonal.html">Home</a></li>
+            <li><a href="homePersonal.html#about-me">About</a></li>
+            <li><a href="homePersonal.html#portofolio">Portfolio</a></li>
+            <li><a class="active" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="body-background">
+
+        <!-- Form -->
+        <form action="message.php" method="post">
+            <img src="/assets/email.svg" alt="#">
+            <h1>Email Messages</h1>
+            <div class="form-container">
+                <div class="form-kedua">
+                    <div class="form-ch">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="Name" placeholder="Ex: James Bryan.." required>    
+                    </div>
+                    <div class="form-ch">
+                        <label for="position">Position</label><br>
+                        <input type="text" name="position" placeholder="Ex: Project Manager.." required>
+                    </div>
+                    <div class="form-ch">
+                        <label>Number Phone</label><br>
+                        <!-- <input type="text" name="country" placeholder="+62" required> -->
+                        <input type="text" name="mobile_code" id="mobile_code" placeholder="Ex: 8123xxx.." required>
+                        <script>
+                            const phoneInputField = document.querySelector("#mobile_code");
+                            const phoneInput = window.intlTelInput(phoneInputField, {
+                              utilsScript:
+                                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                            });
+                        </script>
+                    </div>
+                    <div class="form-ch">
+                        <label>Email</label><br>
+                        <input type="email" name="email" placeholder="Ex: James12@gmail.com.." required>
+                    </div>
+                </div>
+                <div class="form-kedua">
+                    <div class="form-ch">
+                        <label>Gender</label>
+                        <div class="radio-container">
+                            <input type="radio" id="male" name="gender" value="lakik">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="perempuan">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-ch">
+                        <label>Message</label><br>
+                        <textarea name="message" placeholder="Enter a long text..." required></textarea>
+                    </div>
+                    <input type="submit">
+                </div>
+            </div>
+            <p id="additional">Note: Please don't hesitate to share your contact here in order to i can contact you by emailing or sending a number phone. </p>
+            <a href="https://www.flaticon.com/free-icons/email" id="email-icon" title="email icons">Icon Source: flaticon</a>
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>For more information, please visit below</p>
+        <div class="footer-social">
+            <a href="https://wa.me/6289513770668"><img src="/assets/WhatsApp.png"></a>
+            <a href="https://line.me/ti/p/51TFMTEiFk"><img src="/assets/Line.png"></a>
+            <a href="https://www.instagram.com/v.stanleyz/"><img src="/assets/Instagram.png"></a>
+            <a href="https://github.com/ValentioStanley"><img src="/assets/Github.png"></a>
+            <a href="https://mail.google.com/"><img src="/assets/Gmail.png"></a>
+            <a href="https://www.linkedin.com/in/valentio-stanley-abb184212/"><img src="/assets/LinkedIn.png"></a>
+        </div>
+    </footer>
+</body>
+</html>
