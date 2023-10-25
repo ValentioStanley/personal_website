@@ -30,49 +30,36 @@
         <form action="message.php" method="post">
             <img src="/assets/email.svg" alt="#">
             <h1>Email Messages</h1>
-            <div class="form-container">
-                <div class="form-kedua">
-                    <div class="form-ch">
-                        <label for="name">Name</label><br>
-                        <input type="text" name="Name" placeholder="Ex: James Bryan.." required>    
-                    </div>
-                    <div class="form-ch">
-                        <label for="position">Position</label><br>
-                        <input type="text" name="position" placeholder="Ex: Project Manager.." required>
-                    </div>
-                    <div class="form-ch">
-                        <label>Number Phone</label><br>
-                        <!-- <input type="text" name="country" placeholder="+62" required> -->
-                        <input type="text" name="mobile_code" id="mobile_code" placeholder="Ex: 8123xxx.." required>
-                        <script>
-                            const phoneInputField = document.querySelector("#mobile_code");
-                            const phoneInput = window.intlTelInput(phoneInputField, {
-                              utilsScript:
-                                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-                            });
-                        </script>
-                    </div>
-                    <div class="form-ch">
-                        <label>Email</label><br>
-                        <input type="email" name="email" placeholder="Ex: James12@gmail.com.." required>
-                    </div>
+            <div class="form-container">        
+                <div class="form-ch" id="nameCont">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="Name" placeholder="Enter your name" required>    
                 </div>
-                <div class="form-kedua">
-                    <div class="form-ch">
-                        <label>Gender</label>
-                        <div class="radio-container">
-                            <input type="radio" id="male" name="gender" value="lakik">
-                            <label for="male">Male</label>
-                            <input type="radio" id="female" name="gender" value="perempuan">
-                            <label for="female">Female</label>
-                        </div>
-                    </div>
-                    <div class="form-ch">
-                        <label>Message</label><br>
-                        <textarea name="message" placeholder="Enter a long text..." required></textarea>
-                    </div>
-                    <input type="submit">
+                <div class="form-ch">
+                    <label>Number Phone</label><br>
+                    <!-- <input type="text" name="country" placeholder="+62" required> -->
+                    <input type="text" name="mobile_code" id="mobile_code" placeholder="I.e. 8123xxx.." required>
+                    <script>
+                        const phoneInputField = document.querySelector("#mobile_code");
+                        const phoneInput = window.intlTelInput(phoneInputField, {
+                            utilsScript:
+                            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                        });
+                    </script>
                 </div>
+                <div class="form-ch">
+                    <label>Email</label><br>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-ch">
+                    <label>Subject</label><br>
+                    <input type="text" name="email" placeholder="Enter your subject" required>
+                </div>
+                <div class="form-ch">
+                    <label>Message</label><br>
+                    <textarea name="message" placeholder="Enter a long text..." required></textarea>
+                </div>
+                <input type="submit"><br>               
             </div>
             <p id="additional">Note: Please don't hesitate to share your contact here in order to i can contact you by emailing or sending a number phone. </p>
             <a href="https://www.flaticon.com/free-icons/email" id="email-icon" title="email icons">Icon Source: flaticon</a>
